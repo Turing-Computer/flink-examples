@@ -30,7 +30,10 @@ public class KafkaUtils {
      * @Param: [env, topic, groupId, offsets]
      * @Return: org.apache.flink.streaming.api.datastream.DataStreamSource<java.lang.String>
      */
-    public static DataStreamSource<String> getNewKafkaSource(StreamExecutionEnvironment env, String topic, String groupId, OffsetsInitializer offsets) {
+    public static DataStreamSource<String> getNewKafkaSource(StreamExecutionEnvironment env,
+                                                             String topic,
+                                                             String groupId,
+                                                             OffsetsInitializer offsets) {
         // 1.15 之后需要新方法创建kafka source
         KafkaSource<String> source = KafkaSource.<String>builder()
                 .setProperty("partition.discovery.interval.ms", "60000")
@@ -56,6 +59,7 @@ public class KafkaUtils {
         Properties properties = new Properties();
         properties.setProperty("compression.type", "lz4");
         properties.setProperty("compression.codec", "lz4");
+
         return KafkaSink.<String>builder()
                 .setBootstrapServers(KafkaConfig.bootstrapServers)
                 .setRecordSerializer(KafkaRecordSerializationSchema.builder()
