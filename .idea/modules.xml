@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/flink-examples.iml" filepath="$PROJECT_DIR$/flink-examples.iml" />
+      <module fileurl="file://$PROJECT_DIR$/flink16-examples/flink16-examples.iml" filepath="$PROJECT_DIR$/flink16-examples/flink16-examples.iml" />
+    </modules>
+  </component>
+</project>
