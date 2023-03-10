@@ -2,7 +2,6 @@ package com.turing.common.seserialize;
 
 import com.alibaba.fastjson2.JSON;
 import com.turing.bean.Message01;
-import com.turing.pipeline.example3.MainAppPvUv;
 import org.apache.flink.api.common.serialization.DeserializationSchema;
 import org.apache.flink.api.common.typeinfo.TypeInformation;
 import org.apache.flink.streaming.connectors.kafka.KafkaDeserializationSchema;
@@ -17,14 +16,14 @@ import org.slf4j.LoggerFactory;
  * @author lj.michale
  * @date 2023-03-10
  */
-public class MyKafkaDeserialization implements KafkaDeserializationSchema<Message01> {
+public class MassageKafkaDeserialization implements KafkaDeserializationSchema<Message01> {
 
-    private static final Logger logger = LoggerFactory.getLogger(MyKafkaDeserialization.class);
+    private static final Logger logger = LoggerFactory.getLogger(MassageKafkaDeserialization.class);
     private final String encoding = "UTF8";
     private boolean includeTopic;
     private boolean includeTimestamp;
 
-    public MyKafkaDeserialization(boolean includeTopic, boolean includeTimestamp) {
+    public MassageKafkaDeserialization(boolean includeTopic, boolean includeTimestamp) {
         this.includeTopic = includeTopic;
         this.includeTimestamp = includeTimestamp;
     }
@@ -50,6 +49,7 @@ public class MyKafkaDeserialization implements KafkaDeserializationSchema<Messag
             try {
                 String value = new String(message.value(), encoding);
                 Message01 message01 = JSON.parseObject(value, Message01.class);
+                logger.info("序列化之前的数据:{}", JSON.toJSONString(message01));
                 out.collect(message01);
             } catch (Exception e) {
                 logger.error("deserialize failed: " + e.getMessage());

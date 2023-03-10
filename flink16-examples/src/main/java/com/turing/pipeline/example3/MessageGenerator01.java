@@ -22,7 +22,7 @@ public class MessageGenerator01 {
     /**
      * 位置
      */
-    private static String[] position = new String[]{"北京","天津","抚州"};
+    private static String[] position = new String[]{"北京","天津","抚州","长沙","南京","深圳","杭州","常德","吉林"};
     /**
      *网络方式
      */
@@ -97,7 +97,7 @@ public class MessageGenerator01 {
             String json = JSON.toJSONString(message01);
 
             try {
-                Thread.sleep(2000);
+                Thread.sleep(800);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

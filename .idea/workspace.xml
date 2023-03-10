@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c196375-af57-4669-ba6e-ee5b58620dd3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/flink16-examples/src/main/scala/com/flink/pipeline/example3/Main.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flink16-examples/src/main/scala/com/flink/pipeline/example3/MyKafkaDeserializationSchemaTuple3.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flink16-examples/src/main/scala/com/flink/pipeline/example3/MyKeySerializationSchema.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flink16-examples/src/main/scala/com/flink/pipeline/example3/MyPartitioner.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flink16-examples/src/main/scala/com/flink/pipeline/example3/MyTopicSelector.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flink16-examples/src/main/scala/com/flink/pipeline/example3/MyValueSerializationSchema.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flink16-examples/src/main/java/com/turing/common/seserialize/MyKafkaDeserialization.java" beforeDir="false" afterPath="$PROJECT_DIR$/flink16-examples/src/main/java/com/turing/common/seserialize/MassageKafkaDeserialization.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flink16-examples/src/main/java/com/turing/pipeline/example3/MainAppPvUv.java" beforeDir="false" afterPath="$PROJECT_DIR$/flink16-examples/src/main/java/com/turing/pipeline/example3/MainAppPvUv.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flink16-examples/src/main/java/com/turing/pipeline/example3/MessageGenerator01.java" beforeDir="false" afterPath="$PROJECT_DIR$/flink16-examples/src/main/java/com/turing/pipeline/example3/MessageGenerator01.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -75,7 +83,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.MainAppPvUv">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="FlinkPipelineExammpleOne" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.flink.pipeline.example1.FlinkPipelineExammpleOne" />
       <module name="flink16-examples" />
@@ -89,12 +97,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FlinkPipelineExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.turing.pipeline.example3.FlinkPipelineExample" />
+    <configuration name="FlinkTablePipelineExampleOne" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.flink.pipeline.example2.FlinkTablePipelineExampleOne" />
       <module name="flink16-examples" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.turing.pipeline.example3.*" />
+          <option name="PATTERN" value="com.flink.pipeline.example2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -102,12 +110,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FlinkTablePipelineExampleOne" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="com.flink.pipeline.example2.FlinkTablePipelineExampleOne" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.flink.pipeline.example3.Main" />
       <module name="flink16-examples" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.flink.pipeline.example2.*" />
+          <option name="PATTERN" value="com.flink.pipeline.example3.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -143,11 +151,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MainAppPvUv" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.MessageGenerator01" />
+        <item itemvalue="Application.MainAppPvUv" />
         <item itemvalue="Application.FlinkTablePipelineExampleOne" />
         <item itemvalue="Application.FlinkPipelineExammpleOne" />
-        <item itemvalue="Application.FlinkPipelineExample" />
       </list>
     </recent_temporary>
   </component>
@@ -161,7 +169,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1678412653258</updated>
-      <workItem from="1678412656204" duration="11756000" />
+      <workItem from="1678412656204" duration="13006000" />
     </task>
     <task id="LOCAL-00001" summary="[feat][flink]add kafka source">
       <created>1678431340917</created>
@@ -170,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678431340918</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="[feat][flink]KafkaSource自定义序列化类">
+      <created>1678431917593</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1678431917593</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,7 +204,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="[feat][flink]add kafka source" />
-    <option name="LAST_COMMIT_MESSAGE" value="[feat][flink]add kafka source" />
+    <MESSAGE value="[feat][flink]KafkaSource自定义序列化类" />
+    <option name="LAST_COMMIT_MESSAGE" value="[feat][flink]KafkaSource自定义序列化类" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

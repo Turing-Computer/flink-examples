@@ -2,9 +2,8 @@ package com.turing.pipeline.example3;
 
 import com.turing.bean.Message01;
 import com.turing.common.FlinkEnvUtils;
-import com.turing.common.seserialize.MyKafkaDeserialization;
+import com.turing.common.seserialize.MassageKafkaDeserialization;
 import org.apache.flink.api.common.eventtime.WatermarkStrategy;
-import org.apache.flink.api.common.serialization.SimpleStringSchema;
 import org.apache.flink.api.java.utils.ParameterTool;
 import org.apache.flink.connector.kafka.source.KafkaSource;
 import org.apache.flink.connector.kafka.source.enumerator.initializer.OffsetsInitializer;
@@ -48,7 +47,7 @@ public class MainAppPvUv {
                 .setTopics("turing-massage-test")
                 .setGroupId("turing1")
                 .setStartingOffsets(OffsetsInitializer.latest())
-                .setDeserializer(KafkaRecordDeserializationSchema.of(new MyKafkaDeserialization(true, true)))
+                .setDeserializer(KafkaRecordDeserializationSchema.of(new MassageKafkaDeserialization(true, true)))
                 .build();
 
         DataStream<Message01> testDataStreamSource = flinkEnv.env()
