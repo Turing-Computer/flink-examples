@@ -1,11 +1,14 @@
 package com.turing.pipeline.example3;
 
+import com.turing.bean.Message01;
 import com.turing.common.FlinkEnvUtils;
+import com.turing.common.seserialize.MyKafkaDeserialization;
 import org.apache.flink.api.common.eventtime.WatermarkStrategy;
 import org.apache.flink.api.common.serialization.SimpleStringSchema;
 import org.apache.flink.api.java.utils.ParameterTool;
 import org.apache.flink.connector.kafka.source.KafkaSource;
 import org.apache.flink.connector.kafka.source.enumerator.initializer.OffsetsInitializer;
+import org.apache.flink.connector.kafka.source.reader.deserializer.KafkaRecordDeserializationSchema;
 import org.apache.flink.contrib.streaming.state.EmbeddedRocksDBStateBackend;
 import org.apache.flink.streaming.api.datastream.DataStream;
 import org.slf4j.Logger;
@@ -40,14 +43,15 @@ public class MainAppPvUv {
         /**
          * 因此以下使用OffsetsInitializer.latest(),这样只消息最近一条消息不会每次启动进行全量刷新
          */
-        KafkaSource<String> source = KafkaSource.<String>builder()
+        KafkaSource<Message01> source = KafkaSource.<Message01>builder()
                 .setBootstrapServers("192.168.10.102:9092")
                 .setTopics("turing-massage-test")
                 .setGroupId("turing1")
                 .setStartingOffsets(OffsetsInitializer.latest())
-                .setValueOnlyDeserializer(new SimpleStringSchema()).build();
+                .setDeserializer(KafkaRecordDeserializationSchema.of(new MyKafkaDeserialization(true, true)))
+                .build();
 
-        DataStream<String> testDataStreamSource = flinkEnv.env()
+        DataStream<Message01> testDataStreamSource = flinkEnv.env()
                 .fromSource(source, WatermarkStrategy.noWatermarks(), "Kafka Source");
         testDataStreamSource.print();
 

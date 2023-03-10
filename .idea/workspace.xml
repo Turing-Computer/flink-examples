@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c196375-af57-4669-ba6e-ee5b58620dd3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flink16-examples/src/main/java/com/turing/bean/Message01.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flink16-examples/src/main/java/com/turing/common/DateUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flink16-examples/src/main/java/com/turing/common/seserialize/MyKafkaDeserialization.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flink16-examples/src/main/java/com/turing/pipeline/example3/FlinkPipelineExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flink16-examples/src/main/java/com/turing/pipeline/example3/MainAppPvUv.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flink16-examples/src/main/java/com/turing/pipeline/example3/MessageGenerator01.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flink16-examples/src/main/scala/com/flink/common/IPUtils.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flink16-examples/src/main/scala/com/flink/pipeline/example1/CustomGeneratorSource.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flink16-examples/src/main/scala/com/flink/pipeline/example1/FlinkPipelineExammpleOne.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flink16-examples/src/main/scala/com/flink/pipeline/example1/RandomStringSource.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flink16-examples/src/main/scala/com/flink/pipeline/example2/FlinkTablePipelineExampleOne.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flink16-examples/src/main/java/com/turing/pipeline/example3/MainAppPvUv.java" beforeDir="false" afterPath="$PROJECT_DIR$/flink16-examples/src/main/java/com/turing/pipeline/example3/MainAppPvUv.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -172,8 +161,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1678412653258</updated>
-      <workItem from="1678412656204" duration="11143000" />
+      <workItem from="1678412656204" duration="11756000" />
     </task>
+    <task id="LOCAL-00001" summary="[feat][flink]add kafka source">
+      <created>1678431340917</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1678431340918</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,6 +186,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="[feat][flink]add kafka source" />
+    <option name="LAST_COMMIT_MESSAGE" value="[feat][flink]add kafka source" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
