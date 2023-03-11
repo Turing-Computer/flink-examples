@@ -110,58 +110,115 @@ object FlinkPipelineJoinsExample {
 //        |""".stripMargin
 
     /// Lookup Joins
+//    val sql =
+//      """
+//        |CREATE TABLE subscriptions (
+//        |    id STRING,
+//        |    user_id INT,
+//        |    type STRING,
+//        |    start_date TIMESTAMP(3),
+//        |    end_date TIMESTAMP(3),
+//        |    payment_expiration TIMESTAMP(3),
+//        |    proc_time AS PROCTIME()
+//        |) WITH (
+//        |  'connector' = 'faker',
+//        |  'fields.id.expression' = '#{Internet.uuid}',
+//        |  'fields.user_id.expression' = '#{number.numberBetween ''1'',''50''}',
+//        |  'fields.type.expression'= '#{regexify ''(basic|premium|platinum){1}''}',
+//        |  'fields.start_date.expression' = '#{date.past ''30'',''DAYS''}',
+//        |  'fields.end_date.expression' = '#{date.future ''365'',''DAYS''}',
+//        |  'fields.payment_expiration.expression' = '#{date.future ''365'',''DAYS''}'
+//        |);
+//        |
+//        |CREATE TABLE users (
+//        | user_id INT PRIMARY KEY,
+//        | user_name VARCHAR(255) NOT NULL,
+//        | age INT NOT NULL
+//        |)
+//        |WITH (
+//        |  'connector' = 'jdbc',
+//        |  'url' = 'jdbc:mysql://localhost:3306/mysql-database',
+//        |  'table-name' = 'users',
+//        |  'username' = 'mysql-user',
+//        |  'password' = 'mysql-password'
+//        |);
+//        |CREATE TABLE sink_table (
+//        |    subscription_id STRING,
+//        |	subscription_type STRING,
+//        |	user_age INT,
+//        |    is_minor INT
+//        |) WITH (
+//        |  'connector' = 'print'
+//        |);
+//        |INSERT INTO sink_table
+//        |SELECT
+//        |  id AS subscription_id,
+//        |  type AS subscription_type,
+//        |  age AS user_age,
+//        |  CASE
+//        |    WHEN age < 18 THEN 1
+//        |    ELSE 0
+//        |  END AS is_minor
+//        |FROM subscriptions usub
+//        |JOIN users FOR SYSTEM_TIME AS OF usub.proc_time AS u
+//        |  ON usub.user_id = u.user_id;
+//        |""".stripMargin
+
+    /// Lateral Table Join
     val sql =
       """
-        |CREATE TABLE subscriptions (
-        |    id STRING,
-        |    user_id INT,
-        |    type STRING,
-        |    start_date TIMESTAMP(3),
-        |    end_date TIMESTAMP(3),
-        |    payment_expiration TIMESTAMP(3),
-        |    proc_time AS PROCTIME()
+        |CREATE TABLE People (
+        |    id           INT,
+        |    city         STRING,
+        |    state        STRING,
+        |    arrival_time TIMESTAMP(3),
+        |    WATERMARK FOR arrival_time AS arrival_time - INTERVAL '1' MINUTE
         |) WITH (
-        |  'connector' = 'faker',
-        |  'fields.id.expression' = '#{Internet.uuid}',
-        |  'fields.user_id.expression' = '#{number.numberBetween ''1'',''50''}',
-        |  'fields.type.expression'= '#{regexify ''(basic|premium|platinum){1}''}',
-        |  'fields.start_date.expression' = '#{date.past ''30'',''DAYS''}',
-        |  'fields.end_date.expression' = '#{date.future ''365'',''DAYS''}',
-        |  'fields.payment_expiration.expression' = '#{date.future ''365'',''DAYS''}'
+        |    'connector' = 'faker',
+        |    'fields.id.expression'    = '#{number.numberBetween ''1'',''100''}',
+        |    'fields.city.expression'  = '#{regexify ''(Newmouth|Newburgh|Portport|Southfort|Springfield){1}''}',
+        |    'fields.state.expression' = '#{regexify ''(New York|Illinois|California|Washington){1}''}',
+        |    'fields.arrival_time.expression' = '#{date.past ''15'',''SECONDS''}',
+        |    'rows-per-second'          = '10'
         |);
         |
-        |CREATE TABLE users (
-        | user_id INT PRIMARY KEY,
-        | user_name VARCHAR(255) NOT NULL,
-        | age INT NOT NULL
+        |CREATE TEMPORARY VIEW CurrentPopulation AS
+        |SELECT
+        |    city,
+        |    state,
+        |    COUNT(*) as population
+        |FROM (
+        |    SELECT
+        |        city,
+        |        state,
+        |        ROW_NUMBER() OVER (PARTITION BY id ORDER BY arrival_time DESC) AS rownum
+        |    FROM People
         |)
-        |WITH (
-        |  'connector' = 'jdbc',
-        |  'url' = 'jdbc:mysql://localhost:3306/mysql-database',
-        |  'table-name' = 'users',
-        |  'username' = 'mysql-user',
-        |  'password' = 'mysql-password'
-        |);
+        |WHERE rownum = 1
+        |GROUP BY city, state;
+        |
         |CREATE TABLE sink_table (
-        |    subscription_id STRING,
-        |	subscription_type STRING,
-        |	user_age INT,
-        |    is_minor INT
+        |    state STRING,
+        |    city STRING,
+        |    population BIGINT
         |) WITH (
         |  'connector' = 'print'
         |);
+        |
         |INSERT INTO sink_table
         |SELECT
-        |  id AS subscription_id,
-        |  type AS subscription_type,
-        |  age AS user_age,
-        |  CASE
-        |    WHEN age < 18 THEN 1
-        |    ELSE 0
-        |  END AS is_minor
-        |FROM subscriptions usub
-        |JOIN users FOR SYSTEM_TIME AS OF usub.proc_time AS u
-        |  ON usub.user_id = u.user_id;
+        |    state,
+        |    city,
+        |    population
+        |FROM
+        |    (SELECT DISTINCT state FROM CurrentPopulation) States,
+        |    LATERAL (
+        |        SELECT city, population
+        |        FROM CurrentPopulation
+        |        WHERE state = States.state
+        |        ORDER BY population DESC
+        |        LIMIT 2
+        |);
         |""".stripMargin
     val sqlArr = sql.split(";")
 

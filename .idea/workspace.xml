@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1c196375-af57-4669-ba6e-ee5b58620dd3" name="Default Changelist" comment="[feat][flink][faker]Window Top-N">
-      <change afterPath="$PROJECT_DIR$/flink16-examples/src/main/scala/com/flink/pipeline/example5/FlinkPipelineJoinsExample.scala" afterDir="false" />
+    <list default="true" id="1c196375-af57-4669-ba6e-ee5b58620dd3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flink16-examples/src/main/scala/com/flink/pipeline/aggregations/GroupByWindowExamples.scala" beforeDir="false" afterPath="$PROJECT_DIR$/flink16-examples/src/main/scala/com/flink/pipeline/aggregation/GroupByWindowExamples.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flink16-examples/src/main/scala/com/flink/pipeline/example5/FlinkPipelineJoinsExample.scala" beforeDir="false" afterPath="$PROJECT_DIR$/flink16-examples/src/main/scala/com/flink/pipeline/example5/FlinkPipelineJoinsExample.scala" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -167,7 +166,7 @@
       <option name="presentableId" value="Default" />
       <updated>1678412653258</updated>
       <workItem from="1678412656204" duration="18985000" />
-      <workItem from="1678515027185" duration="7386000" />
+      <workItem from="1678515027185" duration="7923000" />
     </task>
     <task id="LOCAL-00001" summary="[feat][flink]add kafka source">
       <created>1678431340917</created>
@@ -246,7 +245,21 @@
       <option name="project" value="LOCAL" />
       <updated>1678522747509</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="[feat][flink][faker]Interval Joins">
+      <created>1678531546527</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1678531546527</updated>
+    </task>
+    <task id="LOCAL-00013" summary="[feat][flink][faker]Lookup Joins">
+      <created>1678531734152</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1678531734153</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -281,7 +294,9 @@
     <MESSAGE value="[feat][flink][faker]As LookupTableSource" />
     <MESSAGE value="[feat][flink][faker]GroupByWindowExamples" />
     <MESSAGE value="[feat][flink][faker]Window Top-N" />
-    <option name="LAST_COMMIT_MESSAGE" value="[feat][flink][faker]Window Top-N" />
+    <MESSAGE value="[feat][flink][faker]Interval Joins" />
+    <MESSAGE value="[feat][flink][faker]Lookup Joins" />
+    <option name="LAST_COMMIT_MESSAGE" value="[feat][flink][faker]Lookup Joins" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
