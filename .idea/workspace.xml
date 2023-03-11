@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1c196375-af57-4669-ba6e-ee5b58620dd3" name="Default Changelist" comment="[feat][flink]在SourceFunction函数中，指定Timestamp和生成Watermark示例">
-      <change afterPath="$PROJECT_DIR$/flink16-examples/src/main/scala/com/flink/pipeline/example4/FlinkPipelineExample1.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/flink-faker-0.5.2.jar" afterDir="false" />
+    <list default="true" id="1c196375-af57-4669-ba6e-ee5b58620dd3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/flink16-examples/src/main/scala/com/flink/pipeline/aggregations/GroupByWindowExamples.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -80,7 +79,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.FlinkPipelineExample1 (1)">
+  <component name="RunManager" selected="Application.GroupByWindowExamples">
     <configuration name="FlinkPipelineExample (1)" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.flink.pipeline.example4.FlinkPipelineExample" />
       <module name="flink16-examples" />
@@ -133,12 +132,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainAppPvUv" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.turing.pipeline.example3.MainAppPvUv" />
+    <configuration name="GroupByWindowExamples" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.flink.pipeline.aggregations.GroupByWindowExamples" />
       <module name="flink16-examples" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.turing.pipeline.example3.*" />
+          <option name="PATTERN" value="com.flink.pipeline.aggregations.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -148,11 +147,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.GroupByWindowExamples" />
         <item itemvalue="Application.FlinkPipelineExample1 (1)" />
         <item itemvalue="Application.FlinkPipelineExample (1)" />
         <item itemvalue="Application.FlinkPipelineExample2" />
         <item itemvalue="Application.FlinkPipelineExample1" />
-        <item itemvalue="Application.MainAppPvUv" />
       </list>
     </recent_temporary>
   </component>
@@ -167,7 +166,7 @@
       <option name="presentableId" value="Default" />
       <updated>1678412653258</updated>
       <workItem from="1678412656204" duration="18985000" />
-      <workItem from="1678515027185" duration="4116000" />
+      <workItem from="1678515027185" duration="4935000" />
     </task>
     <task id="LOCAL-00001" summary="[feat][flink]add kafka source">
       <created>1678431340917</created>
@@ -225,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678520626714</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="[feat][flink][faker]As LookupTableSource">
+      <created>1678521449632</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1678521449632</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -257,7 +263,8 @@
     <MESSAGE value="[feat][flink]基于新版Kafka Connector的工具类示例" />
     <MESSAGE value="[feat][flink][faker]基于faker创建测试数据" />
     <MESSAGE value="[feat][flink]在SourceFunction函数中，指定Timestamp和生成Watermark示例" />
-    <option name="LAST_COMMIT_MESSAGE" value="[feat][flink]在SourceFunction函数中，指定Timestamp和生成Watermark示例" />
+    <MESSAGE value="[feat][flink][faker]As LookupTableSource" />
+    <option name="LAST_COMMIT_MESSAGE" value="[feat][flink][faker]As LookupTableSource" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
