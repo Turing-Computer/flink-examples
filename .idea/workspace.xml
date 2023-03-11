@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1c196375-af57-4669-ba6e-ee5b58620dd3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/flink16-examples/src/main/scala/com/flink/pipeline/example3/Test.java" afterDir="false" />
+    <list default="true" id="1c196375-af57-4669-ba6e-ee5b58620dd3" name="Default Changelist" comment="[feat][flink]在SourceFunction函数中，指定Timestamp和生成Watermark示例">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_knaufk_flink_faker_0_5_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/flink_faker_0_5_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flink16-examples/src/main/java/com/turing/pipeline/example5/FlinkPipelineExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flink16-examples/src/main/java/com/turing/pipeline/example5/FlinkPipelineExample1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flink16-examples/src/main/java/com/turing/pipeline/example5/FlinkPipelineExample2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/flink-faker-0.5.2.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkpoint/5b8d324e0b918736fdb2e91b11eed237/chk-118/_metadata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flink16-examples/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/flink16-examples/pom.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,7 +53,10 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/flink16-examples/src/main/java/com/turing/common" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/flink-faker-0.5.2.jar!/" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
@@ -57,6 +68,7 @@
       <recent name="com.turing.common" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\company\tmp\flink-examples\jars" />
       <recent name="E:\company\tmp\flink-examples\flink16-examples\src\main\java\com\turing\common" />
       <recent name="E:\company\tmp\flink-examples\flink16-examples\src\main\resources" />
       <recent name="E:\company\tmp\flink-examples\flink16-examples\src\main\java\com\turing" />
@@ -75,13 +87,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Test">
-    <configuration name="FlinkTablePipelineExampleOne" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="com.flink.pipeline.example2.FlinkTablePipelineExampleOne" />
+  <component name="RunManager" selected="Application.FlinkPipelineExample2">
+    <configuration name="FlinkPipelineExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.turing.pipeline.example5.FlinkPipelineExample" />
       <module name="flink16-examples" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.flink.pipeline.example2.*" />
+          <option name="PATTERN" value="com.turing.pipeline.example5.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -89,12 +101,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="com.flink.pipeline.example3.Main" />
+    <configuration name="FlinkPipelineExample1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.turing.pipeline.example5.FlinkPipelineExample1" />
       <module name="flink16-examples" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.flink.pipeline.example3.*" />
+          <option name="PATTERN" value="com.turing.pipeline.example5.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FlinkPipelineExample2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.turing.pipeline.example5.FlinkPipelineExample2" />
+      <module name="flink16-examples" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.turing.pipeline.example5.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -128,26 +153,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.flink.pipeline.example3.Test" />
-      <module name="flink16-examples" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.flink.pipeline.example3.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Test" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.MessageGenerator01" />
+        <item itemvalue="Application.FlinkPipelineExample2" />
+        <item itemvalue="Application.FlinkPipelineExample1" />
         <item itemvalue="Application.MainAppPvUv" />
-        <item itemvalue="Application.FlinkTablePipelineExampleOne" />
+        <item itemvalue="Application.MessageGenerator01" />
+        <item itemvalue="Application.FlinkPipelineExample" />
       </list>
     </recent_temporary>
   </component>
@@ -161,7 +173,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1678412653258</updated>
-      <workItem from="1678412656204" duration="14840000" />
+      <workItem from="1678412656204" duration="18985000" />
+      <workItem from="1678515027185" duration="3055000" />
     </task>
     <task id="LOCAL-00001" summary="[feat][flink]add kafka source">
       <created>1678431340917</created>
@@ -198,18 +211,32 @@
       <option name="project" value="LOCAL" />
       <updated>1678434121965</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="[feat][flink]在SourceFunction函数中，指定Timestamp和生成Watermark示例">
+      <created>1678434901718</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1678434901719</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="E:/OpenSource/SourceCode/bigdata/dlink/dinky-web/node_modules/.staging/umi-utils-c9d9a0f9/src/index.d.ts" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -221,7 +248,8 @@
     <MESSAGE value="[feat][flink]Kafka Connector整理" />
     <MESSAGE value="[feat][flink]基于新版Kafka Connector的工具类" />
     <MESSAGE value="[feat][flink]基于新版Kafka Connector的工具类示例" />
-    <option name="LAST_COMMIT_MESSAGE" value="[feat][flink]基于新版Kafka Connector的工具类示例" />
+    <MESSAGE value="[feat][flink]在SourceFunction函数中，指定Timestamp和生成Watermark示例" />
+    <option name="LAST_COMMIT_MESSAGE" value="[feat][flink]在SourceFunction函数中，指定Timestamp和生成Watermark示例" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -230,11 +258,6 @@
           <url>file://$PROJECT_DIR$/flink16-examples/src/main/scala/com/flink/pipeline/example2/FlinkTablePipelineExampleOne.scala</url>
           <line>70</line>
           <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/flink16-examples/src/main/java/com/turing/pipeline/example3/MessageGenerator01.java</url>
-          <line>94</line>
-          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

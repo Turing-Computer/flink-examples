@@ -109,6 +109,12 @@
             <version>${hive.version}</version>
             <scope>provided</scope>
         </dependency>
+        <!-- faker -->
+        <dependency>
+            <groupId>com.github.knaufk</groupId>
+            <artifactId>flink-faker</artifactId>
+            <version>0.5.2</version>
+        </dependency>
     </dependencies>
 
     <!-- 构建配置 -->
