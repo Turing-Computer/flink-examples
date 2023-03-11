@@ -1,4 +1,4 @@
-package com.flink.pipeline.aggregations
+package com.flink.pipeline.aggregation
 
 import com.turing.common.FlinkEnvUtils
 import com.turing.pipeline.example3.FlinkPipelineExample

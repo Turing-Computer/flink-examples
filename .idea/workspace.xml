@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1c196375-af57-4669-ba6e-ee5b58620dd3" name="Default Changelist" comment="">
+    <list default="true" id="1c196375-af57-4669-ba6e-ee5b58620dd3" name="Default Changelist" comment="[feat][flink][faker]Window Top-N">
+      <change afterPath="$PROJECT_DIR$/flink16-examples/src/main/scala/com/flink/pipeline/example5/FlinkPipelineJoinsExample.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flink16-examples/src/main/scala/com/flink/pipeline/aggregations/GroupByWindowExamples.scala" beforeDir="false" afterPath="$PROJECT_DIR$/flink16-examples/src/main/scala/com/flink/pipeline/aggregations/GroupByWindowExamples.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flink16-examples/src/main/scala/com/flink/pipeline/aggregations/GroupByWindowExamples.scala" beforeDir="false" afterPath="$PROJECT_DIR$/flink16-examples/src/main/scala/com/flink/pipeline/aggregation/GroupByWindowExamples.scala" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,11 +54,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.flink.pipeline.example5" />
       <recent name="com.flink.pipeline.example4" />
       <recent name="com.flink.common" />
       <recent name="com.turing.pipeline.example3" />
       <recent name="com.turing.bean" />
-      <recent name="com.turing.pipeline.example1" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\company\tmp\flink-examples\jars" />
@@ -79,7 +80,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.GroupByWindowExamples">
+  <component name="RunManager" selected="Application.FlinkPipelineJoinsExample">
     <configuration name="FlinkPipelineExample (1)" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.flink.pipeline.example4.FlinkPipelineExample" />
       <module name="flink16-examples" />
@@ -106,19 +107,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FlinkPipelineExample1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.turing.pipeline.example5.FlinkPipelineExample1" />
-      <module name="flink16-examples" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.turing.pipeline.example5.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="FlinkPipelineExample2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.turing.pipeline.example5.FlinkPipelineExample2" />
       <module name="flink16-examples" />
@@ -132,12 +120,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GroupByWindowExamples" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="com.flink.pipeline.aggregations.GroupByWindowExamples" />
+    <configuration name="FlinkPipelineJoinsExample" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.flink.pipeline.example5.FlinkPipelineJoinsExample" />
       <module name="flink16-examples" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.flink.pipeline.aggregations.*" />
+          <option name="PATTERN" value="com.flink.pipeline.example5.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GroupByWindowExamples" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.flink.pipeline.aggregation.GroupByWindowExamples" />
+      <module name="flink16-examples" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.flink.pipeline.aggregation.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -147,11 +148,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.FlinkPipelineJoinsExample" />
         <item itemvalue="Application.GroupByWindowExamples" />
         <item itemvalue="Application.FlinkPipelineExample1 (1)" />
         <item itemvalue="Application.FlinkPipelineExample (1)" />
         <item itemvalue="Application.FlinkPipelineExample2" />
-        <item itemvalue="Application.FlinkPipelineExample1" />
       </list>
     </recent_temporary>
   </component>
@@ -166,7 +167,7 @@
       <option name="presentableId" value="Default" />
       <updated>1678412653258</updated>
       <workItem from="1678412656204" duration="18985000" />
-      <workItem from="1678515027185" duration="5420000" />
+      <workItem from="1678515027185" duration="7386000" />
     </task>
     <task id="LOCAL-00001" summary="[feat][flink]add kafka source">
       <created>1678431340917</created>
@@ -238,7 +239,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678522284001</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="[feat][flink][faker]Window Top-N">
+      <created>1678522747509</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1678522747509</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -272,7 +280,8 @@
     <MESSAGE value="[feat][flink]在SourceFunction函数中，指定Timestamp和生成Watermark示例" />
     <MESSAGE value="[feat][flink][faker]As LookupTableSource" />
     <MESSAGE value="[feat][flink][faker]GroupByWindowExamples" />
-    <option name="LAST_COMMIT_MESSAGE" value="[feat][flink][faker]GroupByWindowExamples" />
+    <MESSAGE value="[feat][flink][faker]Window Top-N" />
+    <option name="LAST_COMMIT_MESSAGE" value="[feat][flink][faker]Window Top-N" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
