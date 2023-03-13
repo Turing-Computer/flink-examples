@@ -13,7 +13,6 @@ public class _02_Window_Topn_V3 {
 
     public static void main(String[] args)  {
 
-        // 创建表的执行环境
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
         env.setParallelism(1);
         StreamTableEnvironment tenv = StreamTableEnvironment.create(env);

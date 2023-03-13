@@ -13,7 +13,6 @@ import org.apache.flink.table.api.bridge.java.StreamTableEnvironment;
 public class _02_Window_Topn_V2 {
     public static void main(String[] args)  {
 
-        // 创建表的执行环境
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
         env.setParallelism(1);
         StreamTableEnvironment tenv = StreamTableEnvironment.create(env);
@@ -34,7 +33,6 @@ public class _02_Window_Topn_V2 {
                 "  'scan.startup.mode' = 'earliest-offset',\n" +
                 "  'format' = 'csv'\n" +
                 ")";
-
 
         tenv.executeSql(sourceTable);
         // 10分钟滚动窗口中的交易金额最大的前2笔订单
