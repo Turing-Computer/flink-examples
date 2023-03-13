@@ -1,0 +1,26 @@
+syntax="proto3";
+
+package protobuf.addressbook;
+
+enum PhoneType{
+  MOBILE = 0;
+  HOME = 1;
+  WORK = 2;
+}
+
+message Person{
+  optional string name = 1;
+  optional uint32 age = 2;
+  optional string email = 3;
+
+  message PhoneNumber{
+    optional string number = 1;
+    optional PhoneType type = 2;
+  }
+
+  repeated PhoneNumber phone = 4;
+}
+
+message AddressBook{
+  repeated Person person = 1;
+}
