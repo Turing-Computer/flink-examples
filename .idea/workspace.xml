@@ -2,13 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c196375-af57-4669-ba6e-ee5b58620dd3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_airlift_aircompressor_0_10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_flink_flink_orc_1_16_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hive_hive_storage_api_2_6_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_orc_orc_core_1_5_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_orc_orc_shims_1_5_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flink16-examples/src/main/scala/com/flink/pipeline/example7/FlinkPipelineKafkaExample.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flink16-examples/src/main/java/com/turing/pipeline/example3/MessageGenerator01.java" beforeDir="false" afterPath="$PROJECT_DIR$/flink16-examples/src/main/java/com/turing/pipeline/example3/MessageGenerator01.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -175,7 +168,7 @@
       <workItem from="1678515027185" duration="9827000" />
       <workItem from="1678594298358" duration="2895000" />
       <workItem from="1678671545785" duration="2357000" />
-      <workItem from="1678674260783" duration="7197000" />
+      <workItem from="1678674260783" duration="7437000" />
     </task>
     <task id="LOCAL-00001" summary="[feat][flink]add kafka source">
       <created>1678431340917</created>
@@ -303,7 +296,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678690742136</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="[feat][flinksql]Flink SQL中的Map、Array、Row数据处理">
+      <created>1678694064120</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1678694064120</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -345,7 +345,8 @@
     <MESSAGE value="[feat] add protobuf-java" />
     <MESSAGE value="[feat][connector][redis]连接kafka并把内容sink到redis" />
     <MESSAGE value="[feat][connector]flink sql格式整理" />
-    <option name="LAST_COMMIT_MESSAGE" value="[feat][connector]flink sql格式整理" />
+    <MESSAGE value="[feat][flinksql]Flink SQL中的Map、Array、Row数据处理" />
+    <option name="LAST_COMMIT_MESSAGE" value="[feat][flinksql]Flink SQL中的Map、Array、Row数据处理" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -18,7 +18,6 @@ import java.util.UUID;
  * @date 2023-03-10
  */
 public class MessageGenerator01 {
-
     /**
      * 位置
      */
