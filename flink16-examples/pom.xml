@@ -115,6 +115,11 @@
             <artifactId>flink-faker</artifactId>
             <version>0.5.2</version>
         </dependency>
+        <dependency>
+            <groupId>com.google.protobuf</groupId>
+            <artifactId>protobuf-java</artifactId>
+            <version>3.12.2</version>
+        </dependency>
     </dependencies>
 
     <!-- 构建配置 -->

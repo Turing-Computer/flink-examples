@@ -1,7 +1,7 @@
 package com.turing.pipeline.example5;
 
 import com.turing.common.FlinkEnvUtils;
-import com.turing.pipeline.example4.KafkaUtilsExample4;
+
 import org.apache.flink.api.java.utils.ParameterTool;
 import org.apache.flink.contrib.streaming.state.EmbeddedRocksDBStateBackend;
 import org.slf4j.Logger;
