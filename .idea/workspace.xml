@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1c196375-af57-4669-ba6e-ee5b58620dd3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="1c196375-af57-4669-ba6e-ee5b58620dd3" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +166,7 @@
       <workItem from="1678515027185" duration="9827000" />
       <workItem from="1678594298358" duration="2895000" />
       <workItem from="1678671545785" duration="2357000" />
-      <workItem from="1678674260783" duration="8696000" />
+      <workItem from="1678674260783" duration="8934000" />
     </task>
     <task id="LOCAL-00001" summary="[feat][flink]add kafka source">
       <created>1678431340917</created>
@@ -310,7 +308,21 @@
       <option name="project" value="LOCAL" />
       <updated>1678694281990</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="[feat][flinksql]window top N|10分钟滚动窗口中的交易金额最大的前2笔订单">
+      <created>1678698297417</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1678698297417</updated>
+    </task>
+    <task id="LOCAL-00022" summary="[feat][flinksql]window top N|10分钟滚动窗口内交易总额最高的前两家供应商，及其交易总额和交易单数">
+      <created>1678698376340</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1678698376340</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -353,7 +365,9 @@
     <MESSAGE value="[feat][connector][redis]连接kafka并把内容sink到redis" />
     <MESSAGE value="[feat][connector]flink sql格式整理" />
     <MESSAGE value="[feat][flinksql]Flink SQL中的Map、Array、Row数据处理" />
-    <option name="LAST_COMMIT_MESSAGE" value="[feat][flinksql]Flink SQL中的Map、Array、Row数据处理" />
+    <MESSAGE value="[feat][flinksql]window top N|10分钟滚动窗口中的交易金额最大的前2笔订单" />
+    <MESSAGE value="[feat][flinksql]window top N|10分钟滚动窗口内交易总额最高的前两家供应商，及其交易总额和交易单数" />
+    <option name="LAST_COMMIT_MESSAGE" value="[feat][flinksql]window top N|10分钟滚动窗口内交易总额最高的前两家供应商，及其交易总额和交易单数" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -362,6 +376,11 @@
           <url>file://$PROJECT_DIR$/flink16-examples/src/main/scala/com/flink/pipeline/example2/FlinkTablePipelineExampleOne.scala</url>
           <line>70</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/flink16-examples/src/main/java/com/turing/pipeline/example8/_02_Window_Topn_V2.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
