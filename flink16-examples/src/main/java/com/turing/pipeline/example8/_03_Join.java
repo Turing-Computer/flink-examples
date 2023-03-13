@@ -16,6 +16,7 @@ import org.apache.flink.table.api.bridge.java.StreamTableEnvironment;
  * @date 2023-03-13
  */
 public class _03_Join {
+
     public static void main(String[] args) {
         // 创建表的执行环境
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
