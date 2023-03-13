@@ -49,26 +49,26 @@ public class MessageGenerator01 {
      */
     private static String[] gpm = new String[]{"http://172.24.103.102:7088/controlmanage/platformOverView","http://172.24.103.103:7088/datamanagement/metadata","http://172.24.103.104:7088/projectmanage/projectList"};
     /**
-    account_id                        VARCHAR,--用户ID。
-    client_ip                         VARCHAR,--客户端IP。
-    client_info                       VARCHAR,--设备机型信息。
-    platform                          VARCHAR,--系统版本信息。
-    imei                              VARCHAR,--设备唯一标识。
-    `version`                         VARCHAR,--版本号。
-    `action`                          VARCHAR,--页面跳转描述。
-    gpm                               VARCHAR,--埋点链路。
-    c_time                            VARCHAR,--请求时间。
-    target_type                       VARCHAR,--目标类型。
-    target_id                         VARCHAR,--目标ID。
-    udata                             VARCHAR,--扩展信息，JSON格式。
-    session_id                        VARCHAR,--会话ID。
-    product_id_chain                  VARCHAR,--商品ID串。
-    cart_product_id_chain             VARCHAR,--加购商品ID。
-    tag                               VARCHAR,--特殊标记。
-    `position`                        VARCHAR,--位置信息。
-    network                           VARCHAR,--网络使用情况。
-    p_dt                              VARCHAR,--时间分区天。
-    p_platform                        VARCHAR --系统版本信息。
+        account_id                        VARCHAR,--用户ID。
+        client_ip                         VARCHAR,--客户端IP。
+        client_info                       VARCHAR,--设备机型信息。
+        platform                          VARCHAR,--系统版本信息。
+        imei                              VARCHAR,--设备唯一标识。
+        `version`                         VARCHAR,--版本号。
+        `action`                          VARCHAR,--页面跳转描述。
+        gpm                               VARCHAR,--埋点链路。
+        c_time                            VARCHAR,--请求时间。
+        target_type                       VARCHAR,--目标类型。
+        target_id                         VARCHAR,--目标ID。
+        udata                             VARCHAR,--扩展信息，JSON格式。
+        session_id                        VARCHAR,--会话ID。
+        product_id_chain                  VARCHAR,--商品ID串。
+        cart_product_id_chain             VARCHAR,--加购商品ID。
+        tag                               VARCHAR,--特殊标记。
+        `position`                        VARCHAR,--位置信息。
+        network                           VARCHAR,--网络使用情况。
+        p_dt                              VARCHAR,--时间分区天。
+        p_platform                        VARCHAR --系统版本信息。
     **/
 
     public static void main(String[] args) {
@@ -94,7 +94,10 @@ public class MessageGenerator01 {
             message01.setPosition(position[random.nextInt(position.length)]);
             message01.setNetwork(networksUse[random.nextInt(networksUse.length)]);
             message01.setP_dt(DateUtils.getCurrentDateOfPattern("yyyy-MM-dd"));
+
             String json = JSON.toJSONString(message01);
+//            String msg = "{\"create_by\":\"charlie\",\"create_date\":\"2022-08-08 18:24:23\",\"data_list\":[{\"name\":\"zhangsan\",\"age\":21}]}";
+            String msg = "{\"id\":1238123899121,\"name\":\"asdlkjasjkdla998y1122\",\"date\":\"1990-10-14\",\"obj\":{\"time1\":\"12:12:43Z\",\"str\":\"sfasfafs\",\"lg\":2324342345},\"arr\":[{\"f1\":\"f1str11\",\"f2\":134},{\"f1\":\"f1str22\",\"f2\":555}],\"time\":\"12:12:43Z\",\"timestamp\":\"1990-10-14T12:12:43Z\",\"map\":{\"flink\":123},\"mapinmap\":{\"inner_map\":{\"key\":234}}}";
 
             try {
                 Thread.sleep(800);
@@ -102,10 +105,10 @@ public class MessageGenerator01 {
                 e.printStackTrace();
             }
 
-            ProducerRecord record = new ProducerRecord<String, String>("turing-massage-test",json);
+            ProducerRecord record = new ProducerRecord<String, String>("turing-massage-test",msg);
             producer.send(record);
 
-            System.out.println(json);
+            System.out.println(msg);
         }
 
     }
