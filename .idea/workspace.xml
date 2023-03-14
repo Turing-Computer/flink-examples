@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1c196375-af57-4669-ba6e-ee5b58620dd3" name="Default Changelist" comment="">
+    <list default="true" id="1c196375-af57-4669-ba6e-ee5b58620dd3" name="Default Changelist" comment="[feat][flinksql]TableSqlTest">
+      <change afterPath="$PROJECT_DIR$/flink16-examples/src/main/scala/com/flink/pipeline/example7/FlinkTableBatchPipelineByStreamTableEnvironmentDemo.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flink16-examples/src/main/scala/com/flink/pipeline/example7/FlinkTableStreamPipelineByStreamTableEnvironmentDemo.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flink16-examples/src/main/java/com/turing/common/FlinkEnvUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/flink16-examples/src/main/java/com/turing/common/FlinkEnvUtils.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -172,7 +173,7 @@
       <workItem from="1678674260783" duration="11159000" />
       <workItem from="1678701918853" duration="1423000" />
       <workItem from="1678709323284" duration="1280000" />
-      <workItem from="1678756792073" duration="1622000" />
+      <workItem from="1678756792073" duration="2847000" />
     </task>
     <task id="LOCAL-00001" summary="[feat][flink]add kafka source">
       <created>1678431340917</created>
@@ -363,7 +364,21 @@
       <option name="project" value="LOCAL" />
       <updated>1678758014440</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="[feat][flinksql]SqlBatchDemo">
+      <created>1678758500655</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1678758500655</updated>
+    </task>
+    <task id="LOCAL-00029" summary="[feat][flinksql]TableSqlTest">
+      <created>1678758602651</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1678758602651</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -388,7 +403,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[feat][flink]add kafka source" />
     <MESSAGE value="[feat][flink]KafkaSource自定义序列化类" />
     <MESSAGE value="[feat][flink]Kafka Connector整理" />
     <MESSAGE value="[feat][flink]基于新版Kafka Connector的工具类" />
@@ -412,7 +426,9 @@
     <MESSAGE value="[feat][flinksql]Flink SQL 自定义函数使用" />
     <MESSAGE value="[feat][flinksql]FlinkTableBatchPipelineExample1" />
     <MESSAGE value="[feat][flinksql]FlinkTableStreeamPipelineExample1$" />
-    <option name="LAST_COMMIT_MESSAGE" value="[feat][flinksql]FlinkTableStreeamPipelineExample1$" />
+    <MESSAGE value="[feat][flinksql]SqlBatchDemo" />
+    <MESSAGE value="[feat][flinksql]TableSqlTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="[feat][flinksql]TableSqlTest" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
