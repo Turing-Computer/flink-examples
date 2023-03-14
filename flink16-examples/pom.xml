@@ -151,6 +151,11 @@
             <artifactId>protobuf-java</artifactId>
             <version>3.12.2</version>
         </dependency>
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-cep</artifactId>
+            <version>${flink.version}</version>
+        </dependency>
     </dependencies>
 
     <!-- 构建配置 -->
