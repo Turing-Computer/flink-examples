@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c196375-af57-4669-ba6e-ee5b58620dd3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/flink16-examples/src/main/java/com/turing/bean/SensorReading.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flink16-examples/src/main/java/com/turing/bean/TempSensorData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flink16-examples/src/main/java/com/turing/bean/Ticker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flink16-examples/src/main/java/com/turing/pipeline/example8/FlinkCEPSQLExample1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flink16-examples/src/main/scala/com/flink/pipeline/example8/FlinkTableStreamPipelineByStreamTableEnvironmentDemo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flink16-examples/src/main/scala/com/flink/pipeline/example7/FlinkTableBatchPipelineByStreamTableEnvironmentDemo.scala" beforeDir="false" afterPath="$PROJECT_DIR$/flink16-examples/src/main/scala/com/flink/pipeline/example7/FlinkTableBatchPipelineByStreamTableEnvironmentDemo.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flink16-examples/src/main/scala/com/flink/pipeline/example7/FlinkTableStreamPipelineByStreamTableEnvironmentDemo.scala" beforeDir="false" afterPath="$PROJECT_DIR$/flink16-examples/src/main/scala/com/flink/pipeline/example7/FlinkTableStreamPipelineByStreamTableEnvironmentDemo.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flink16-examples/src/main/scala/com/flink/pipeline/example8/FlinkTableStreamPipelineByStreamTableEnvironmentDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/flink16-examples/src/main/scala/com/flink/pipeline/example8/FlinkTableStreamPipelineByStreamTableEnvironmentDemo.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -178,7 +172,7 @@
       <workItem from="1678674260783" duration="11159000" />
       <workItem from="1678701918853" duration="1423000" />
       <workItem from="1678709323284" duration="1280000" />
-      <workItem from="1678756792073" duration="8806000" />
+      <workItem from="1678756792073" duration="9450000" />
     </task>
     <task id="LOCAL-00001" summary="[feat][flink]add kafka source">
       <created>1678431340917</created>
@@ -390,7 +384,21 @@
       <option name="project" value="LOCAL" />
       <updated>1678759673080</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="[feat][flinksql]FlinkTableStreamPipelineByStreamTableEnvironmentDemo">
+      <created>1678774231521</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1678774231521</updated>
+    </task>
+    <task id="LOCAL-00032" summary="[feat][flinksql]FlinkTableStreamPipelineByStreamTableEnvironmentDemo">
+      <created>1678774251477</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1678774251477</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

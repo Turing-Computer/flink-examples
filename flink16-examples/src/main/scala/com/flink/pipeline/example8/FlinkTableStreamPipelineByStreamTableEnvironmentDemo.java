@@ -12,6 +12,7 @@ import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.table.api.DataTypes;
 import org.apache.flink.table.api.Schema;
 import org.apache.flink.table.api.Table;
+import org.apache.flink.table.api.Tumble;
 import org.apache.flink.table.api.bridge.java.StreamTableEnvironment;
 import org.apache.flink.table.types.DataType;
 import org.slf4j.Logger;
@@ -20,8 +21,8 @@ import org.slf4j.LoggerFactory;
 import java.io.InputStream;
 import java.time.Duration;
 import java.time.ZoneId;
-
-import static org.apache.flink.table.api.Expressions.$;
+import static org.apache.flink.table.api.Expressions.*;
+//import static org.apache.flink.table.api.Expressions.$;
 
 /**
  * @descri
@@ -84,16 +85,20 @@ public class FlinkTableStreamPipelineByStreamTableEnvironmentDemo {
 //                .columnByExpression("new_cTime", "to_timestamp(from_unixtime(cast(timestamp as bigint) / 1000, 'yyyy-MM-dd HH:mm:ss'))")
                 .watermark("rowtime", "rowtime - INTERVAL '1' SECOND")
                 .build());
-        table.execute().print();
-//        Table table = tEnv.fromDataStream(tempSensorData,
-//                $("sensorID"),
-//                $("tp"),
-//                $("temp"),
-//                // 新增evTime字段为rowtime
-//                $("evTime").rowtime(),
-//                $("pt").proctime()
-//        );
 //        table.execute().print();
+
+        // 自定义窗口并计算
+        Table result = table.window(Tumble
+                 // 窗口大小为2s
+                .over(lit(2).second())
+                // 按照eventTime排序
+                .on($("rowtime"))
+                .as("w"))
+                // 按照sensorID和窗口分组
+                .groupBy($("id"), $("w"))
+                // 统计每个窗口的平均气温
+                .select($("id"), $("temperature").avg().as("avgTemp"));
+        result.execute().print();
 
         flinkEnv.execute("FlinkTableStreamPipelineByStreamTableEnvironmentDemo");
     }
