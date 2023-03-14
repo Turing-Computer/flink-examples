@@ -79,7 +79,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.CEPSQLExampleAfterMatch3">
+  <component name="RunManager" selected="Application.CEPSQLExampleAfterMatch4">
     <configuration name="CEPSQLExampleAfterMatch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.turing.pipeline.cep.CEPSQLExampleAfterMatch" />
       <module name="flink16-examples" />
@@ -119,12 +119,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FlinkCEPSQLExample1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.turing.pipeline.example8.FlinkCEPSQLExample1" />
+    <configuration name="CEPSQLExampleAfterMatch4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.turing.pipeline.cep.CEPSQLExampleAfterMatch4" />
       <module name="flink16-examples" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.turing.pipeline.example8.*" />
+          <option name="PATTERN" value="com.turing.pipeline.cep.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -147,11 +147,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CEPSQLExampleAfterMatch4" />
         <item itemvalue="Application.CEPSQLExampleAfterMatch3" />
         <item itemvalue="Application.CEPSQLExampleAfterMatch2" />
         <item itemvalue="Application.CEPSQLExampleAfterMatch" />
         <item itemvalue="Application.FlinkTableStreamPipelineByStreamTableEnvironmentDemo" />
-        <item itemvalue="Application.FlinkCEPSQLExample1" />
       </list>
     </recent_temporary>
   </component>
