@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1c196375-af57-4669-ba6e-ee5b58620dd3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/flink16-examples/src/main/scala/com/flink/pipeline/example7/User.scala" afterDir="false" />
+    <list default="true" id="1c196375-af57-4669-ba6e-ee5b58620dd3" name="Default Changelist" comment="[feat][flinksql]Flink SQL 自定义函数使用">
+      <change afterPath="$PROJECT_DIR$/flink16-examples/src/main/scala/com/flink/pipeline/example7/FlinkTablePipelineExample1.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flink16-examples/src/main/java/com/turing/pipeline/example7/FlinkPipelineExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/flink16-examples/src/main/java/com/turing/pipeline/example7/FlinkPipelineExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flink16-examples/src/main/java/com/turing/pipeline/example8/_02_Window_Topn_V2.java" beforeDir="false" afterPath="$PROJECT_DIR$/flink16-examples/src/main/java/com/turing/pipeline/example8/_02_Window_Topn_V2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flink16-examples/src/main/java/com/turing/pipeline/example8/_02_Window_Topn_V3.java" beforeDir="false" afterPath="$PROJECT_DIR$/flink16-examples/src/main/java/com/turing/pipeline/example8/_02_Window_Topn_V3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flink16-examples/src/main/scala/com/flink/pipeline/example7/User.scala" beforeDir="false" afterPath="$PROJECT_DIR$/flink16-examples/src/main/scala/com/flink/pipeline/example7/User.scala" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -82,20 +80,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.FlinkPipelineKafkaExample">
-    <configuration name="FlinkPipelineExample1 (1)" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="com.flink.pipeline.example4.FlinkPipelineExample1" />
-      <module name="flink16-examples" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.flink.pipeline.example4.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.FlinkTablePipelineExample1">
     <configuration name="FlinkPipelineJoinsExample" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.flink.pipeline.example5.FlinkPipelineJoinsExample" />
       <module name="flink16-examples" />
@@ -111,6 +96,19 @@
     </configuration>
     <configuration name="FlinkPipelineKafkaExample" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.flink.pipeline.example7.FlinkPipelineKafkaExample" />
+      <module name="flink16-examples" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.flink.pipeline.example7.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FlinkTablePipelineExample1" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.flink.pipeline.example7.FlinkTableBatchPipelineExample1" />
       <module name="flink16-examples" />
       <extension name="coverage">
         <pattern>
@@ -150,11 +148,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.FlinkTablePipelineExample1" />
         <item itemvalue="Application.FlinkPipelineKafkaExample" />
         <item itemvalue="Application.MessageGenerator01" />
         <item itemvalue="Application.FlinkPipelineJoinsExample" />
         <item itemvalue="Application.GroupByWindowExamples" />
-        <item itemvalue="Application.FlinkPipelineExample1 (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -173,7 +171,9 @@
       <workItem from="1678594298358" duration="2895000" />
       <workItem from="1678671545785" duration="2357000" />
       <workItem from="1678674260783" duration="11159000" />
-      <workItem from="1678701918853" duration="671000" />
+      <workItem from="1678701918853" duration="1423000" />
+      <workItem from="1678709323284" duration="1280000" />
+      <workItem from="1678756792073" duration="879000" />
     </task>
     <task id="LOCAL-00001" summary="[feat][flink]add kafka source">
       <created>1678431340917</created>
@@ -343,7 +343,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678699407543</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="[feat][flinksql]Flink SQL 自定义函数使用">
+      <created>1678702609634</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1678702609634</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -389,7 +396,8 @@
     <MESSAGE value="[feat][flinksql]window top N|10分钟滚动窗口中的交易金额最大的前2笔订单" />
     <MESSAGE value="[feat][flinksql]window top N|10分钟滚动窗口内交易总额最高的前两家供应商，及其交易总额和交易单数" />
     <MESSAGE value="[feat][flinksql]各种窗口的join代码示例" />
-    <option name="LAST_COMMIT_MESSAGE" value="[feat][flinksql]各种窗口的join代码示例" />
+    <MESSAGE value="[feat][flinksql]Flink SQL 自定义函数使用" />
+    <option name="LAST_COMMIT_MESSAGE" value="[feat][flinksql]Flink SQL 自定义函数使用" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
