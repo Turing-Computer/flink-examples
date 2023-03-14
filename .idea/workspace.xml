@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c196375-af57-4669-ba6e-ee5b58620dd3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/flink16-examples/src/main/java/com/turing/pipeline/cep/CEPSQLExampleAfterMatch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flink16-examples/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/flink16-examples/pom.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -79,13 +79,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.FlinkTableStreamPipelineByStreamTableEnvironmentDemo">
-    <configuration name="FlinkCEPSQLExample1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.turing.pipeline.example8.FlinkCEPSQLExample1" />
+  <component name="RunManager" selected="Application.CEPSQLExampleAfterMatch">
+    <configuration name="CEPSQLExampleAfterMatch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.turing.pipeline.cep.CEPSQLExampleAfterMatch" />
       <module name="flink16-examples" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.turing.pipeline.example8.*" />
+          <option name="PATTERN" value="com.turing.pipeline.cep.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -93,12 +93,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FlinkPipelineKafkaExample" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="com.flink.pipeline.example7.FlinkPipelineKafkaExample" />
+    <configuration name="FlinkCEPSQLExample1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.turing.pipeline.example8.FlinkCEPSQLExample1" />
       <module name="flink16-examples" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.flink.pipeline.example7.*" />
+          <option name="PATTERN" value="com.turing.pipeline.example8.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -147,11 +147,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CEPSQLExampleAfterMatch" />
         <item itemvalue="Application.FlinkTableStreamPipelineByStreamTableEnvironmentDemo" />
         <item itemvalue="Application.FlinkCEPSQLExample1" />
         <item itemvalue="Application.FlinkTableStreeamPipelineExample1$" />
         <item itemvalue="Application.FlinkTablePipelineExample1" />
-        <item itemvalue="Application.FlinkPipelineKafkaExample" />
       </list>
     </recent_temporary>
   </component>
@@ -172,7 +172,7 @@
       <workItem from="1678674260783" duration="11159000" />
       <workItem from="1678701918853" duration="1423000" />
       <workItem from="1678709323284" duration="1280000" />
-      <workItem from="1678756792073" duration="9959000" />
+      <workItem from="1678756792073" duration="10484000" />
     </task>
     <task id="LOCAL-00001" summary="[feat][flink]add kafka source">
       <created>1678431340917</created>
@@ -405,7 +405,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678774731651</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="[feat][flink-cep]add flink-cep依赖">
+      <created>1678775252662</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1678775252662</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -430,7 +437,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[feat][flink]Kafka Connector整理" />
     <MESSAGE value="[feat][flink]基于新版Kafka Connector的工具类" />
     <MESSAGE value="[feat][flink]基于新版Kafka Connector的工具类示例" />
     <MESSAGE value="[feat][flink][faker]基于faker创建测试数据" />
@@ -455,7 +461,8 @@
     <MESSAGE value="[feat][flinksql]SqlBatchDemo" />
     <MESSAGE value="[feat][flinksql]TableSqlTest" />
     <MESSAGE value="[feat][flinksql]FlinkTableStreamPipelineByStreamTableEnvironmentDemo" />
-    <option name="LAST_COMMIT_MESSAGE" value="[feat][flinksql]FlinkTableStreamPipelineByStreamTableEnvironmentDemo" />
+    <MESSAGE value="[feat][flink-cep]add flink-cep依赖" />
+    <option name="LAST_COMMIT_MESSAGE" value="[feat][flink-cep]add flink-cep依赖" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
