@@ -20,11 +20,14 @@ object FlinkTableStreamPipelineByStreamTableEnvironmentDemo {
     val checkpointPath = parameterTool.get("flink.pipeline.checkpoint.url")
     logger.info("load global property file:{}", fileName)
 
-    val flinkEnv:StreamExecutionEnvironment = FlinkEnvUtils.getStreamTableEnv(args).getStreamExecutionEnvironment
-    flinkEnv.setRuntimeMode(RuntimeExecutionMode.STREAMING)
-    val tEnv = StreamTableEnvironment.create(flinkEnv)
-
-    flinkEnv.execute(s"${this.getClass.getName}")
+//    val flinkEnv:StreamExecutionEnvironment = FlinkEnvUtils.getStreamTableEnv(args).getStreamExecutionEnvironment
+//    flinkEnv.setRuntimeMode(RuntimeExecutionMode.STREAMING)
+//    flinkEnv.setParallelism(1)
+//    val tEnv = StreamTableEnvironment.create(flinkEnv)
+//    System.out.println(tEnv.getConfig.getLocalTimeZone)
+//
+//
+//    flinkEnv.execute(s"${this.getClass.getName}")
 
   }
 
