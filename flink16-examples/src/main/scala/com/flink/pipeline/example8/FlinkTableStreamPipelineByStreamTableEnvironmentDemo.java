@@ -14,7 +14,7 @@ import org.apache.flink.table.api.Schema;
 import org.apache.flink.table.api.Table;
 import org.apache.flink.table.api.Tumble;
 import org.apache.flink.table.api.bridge.java.StreamTableEnvironment;
-import org.apache.flink.table.types.DataType;
+import org.apache.flink.types.Row;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -22,10 +22,9 @@ import java.io.InputStream;
 import java.time.Duration;
 import java.time.ZoneId;
 import static org.apache.flink.table.api.Expressions.*;
-//import static org.apache.flink.table.api.Expressions.$;
 
 /**
- * @descri
+ * @descri  参考资料： https://blog.csdn.net/dajiangtai007/article/details/124635547
  *  nc -lk 9999
  *  s-5,1645085900,14
  *
@@ -87,18 +86,28 @@ public class FlinkTableStreamPipelineByStreamTableEnvironmentDemo {
                 .build());
 //        table.execute().print();
 
+        tEnv.createTemporaryView("EventTable",tempSensorStream);
         // 自定义窗口并计算
-        Table result = table.window(Tumble
-                 // 窗口大小为2s
-                .over(lit(2).second())
-                // 按照eventTime排序
-                .on($("rowtime"))
-                .as("w"))
-                // 按照sensorID和窗口分组
-                .groupBy($("id"), $("w"))
-                // 统计每个窗口的平均气温
-                .select($("id"), $("temperature").avg().as("avgTemp"));
-        result.execute().print();
+//        Table result = table.window(Tumble
+//                 // 窗口大小为2s
+//                .over(lit(2).second())
+//                // 按照eventTime排序
+//                .on($("rowtime"))
+//                // 定义一个Tumble window并指定别名w
+//                .as("w"))
+//                // 按照sensorID和窗口分组
+//                .groupBy($("id"), $("w"))
+//                // 统计每个窗口的平均气温
+//                .select($("id"), $("temperature").avg().as("avgTemp"));
+//        result.execute().print();
+
+        //// 将表(Table)转换成流(DataStream)
+        DataStream<Row> tempSensorStream2 = tEnv.toDataStream(table);
+
+        tEnv.createTemporaryView("clickTable",table);
+        Table aggResult = tEnv.sqlQuery("select user,COUNT(url) as cnt from clickTable group by user");
+        DataStream<Row> tempSensorStream3 = tEnv.toChangelogStream(aggResult);
+
 
         flinkEnv.execute("FlinkTableStreamPipelineByStreamTableEnvironmentDemo");
     }
