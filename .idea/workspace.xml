@@ -1,39 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1c196375-af57-4669-ba6e-ee5b58620dd3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_docker_java_docker_java_api_3_2_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_docker_java_docker_java_transport_3_2_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_docker_java_docker_java_transport_zerodep_3_2_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_java_dev_jna_jna_5_8_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_flink_flink_core_test_jar_tests_1_16_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_flink_flink_java_test_jar_tests_1_16_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_flink_flink_rpc_akka_loader_test_jar_tests_1_16_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_flink_flink_runtime_test_jar_tests_1_16_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_flink_flink_statebackend_changelog_1_16_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_flink_flink_statebackend_common_1_16_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_flink_flink_test_utils_1_16_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_flink_flink_test_utils_junit_1_16_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_16_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_annotations_17_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_6_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_6_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_6_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_6_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_6_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_6_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_vintage_junit_vintage_engine_5_6_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_rnorth_duct_tape_duct_tape_1_0_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_testcontainers_testcontainers_1_17_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flink16-examples/src/main/java/com/turing/pipeline/unit/StatefulFlatMapFunction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flink16-examples/src/main/java/com/turing/pipeline/unit/StatefulMapFunction.java" afterDir="false" />
+    <list default="true" id="1c196375-af57-4669-ba6e-ee5b58620dd3" name="Default Changelist" comment="[feat][flink-unit]DataStream API Testing与DataStream API Testing">
+      <change afterPath="$PROJECT_DIR$/flink16-examples/src/main/java/com/turing/pipeline/example9/FlinkPipelineExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flink16-examples/src/main/java/com/turing/pipeline/example9/MyWaterMarks.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flink16-examples/src/main/java/com/turing/pipeline/example9/PunctuatedAssigner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flink16-examples/src/main/java/com/turing/pipeline/example9/TimeLagWatermarkGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flink16-examples/src/main/java/com/turing/pipeline/example9/WaterMark.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flink16-examples/src/main/java/com/turing/pipeline/example9/WindowImageSource.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/flink16-examples/src/test/java/com/turing/unit/ExampleIntegrationTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flink16-examples/src/test/java/com/turing/unit/FlinkStatefulOperatorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flink16-examples/src/test/java/com/turing/unit/IncrementMapFunction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flink16-examples/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/flink16-examples/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flink16-examples/src/test/java/com/turing/unit/IncrementMapFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/flink16-examples/src/test/java/com/turing/unit/IncrementMapFunction.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -109,13 +86,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.FlinkFunctionUnitTest.testCustomFlatMapFunction2">
-    <configuration name="CEPSQLExampleAfterMatch3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.turing.pipeline.cep.CEPSQLExampleAfterMatch3" />
+  <component name="RunManager" selected="Application.WaterMark">
+    <configuration name="WaterMark" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.turing.pipeline.example9.WaterMark" />
       <module name="flink16-examples" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.turing.pipeline.cep.*" />
+          <option name="PATTERN" value="com.turing.pipeline.example9.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -123,15 +100,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CEPSQLExampleAfterMatch4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.turing.pipeline.cep.CEPSQLExampleAfterMatch4" />
+    <configuration name="ExampleIntegrationTest.testIncrementPipeline" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="flink16-examples" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.turing.pipeline.cep.*" />
+          <option name="PATTERN" value="com.turing.unit.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.turing.unit" />
+      <option name="MAIN_CLASS_NAME" value="com.turing.unit.ExampleIntegrationTest" />
+      <option name="METHOD_NAME" value="testIncrementPipeline" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -186,11 +166,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.WaterMark" />
+        <item itemvalue="JUnit.ExampleIntegrationTest.testIncrementPipeline" />
         <item itemvalue="JUnit.FlinkFunctionUnitTest.testCustomFlatMapFunction2" />
         <item itemvalue="JUnit.FlinkFunctionUnitTest.testCustomFlatMapFunction" />
         <item itemvalue="JUnit.FlinkFunctionUnitTest.testIncrement" />
-        <item itemvalue="Application.CEPSQLExampleAfterMatch4" />
-        <item itemvalue="Application.CEPSQLExampleAfterMatch3" />
       </list>
     </recent_temporary>
   </component>
@@ -213,7 +193,9 @@
       <workItem from="1678709323284" duration="1280000" />
       <workItem from="1678756792073" duration="14197000" />
       <workItem from="1678787520424" duration="1169000" />
-      <workItem from="1678863742079" duration="3434000" />
+      <workItem from="1678863742079" duration="6462000" />
+      <workItem from="1678930483420" duration="541000" />
+      <workItem from="1678931447194" duration="2128000" />
     </task>
     <task id="LOCAL-00001" summary="[feat][flink]add kafka source">
       <created>1678431340917</created>
@@ -488,7 +470,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678864200063</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="[feat][flink-unit]DataStream API Testing与DataStream API Testing">
+      <created>1678867530407</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1678867530407</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -513,7 +502,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[feat][flink][faker]GroupByWindowExamples" />
     <MESSAGE value="[feat][flink][faker]Window Top-N" />
     <MESSAGE value="[feat][flink][faker]Interval Joins" />
     <MESSAGE value="[feat][flink][faker]Lookup Joins" />
@@ -538,7 +526,8 @@
     <MESSAGE value="[feat][flink-cep]Flink CEP SQL匹配模式|skip to first pattern Item" />
     <MESSAGE value="[feat][flink-cep]Flink CEP SQL匹配模式|skip to last pattern Item" />
     <MESSAGE value="[feat][flink-unit]flink单元测试|测试用户自定义函数&amp;对无状态、无时间限制的UDF进行单元测试" />
-    <option name="LAST_COMMIT_MESSAGE" value="[feat][flink-unit]flink单元测试|测试用户自定义函数&amp;对无状态、无时间限制的UDF进行单元测试" />
+    <MESSAGE value="[feat][flink-unit]DataStream API Testing与DataStream API Testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="[feat][flink-unit]DataStream API Testing与DataStream API Testing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
