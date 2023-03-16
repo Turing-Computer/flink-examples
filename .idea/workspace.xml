@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c196375-af57-4669-ba6e-ee5b58620dd3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/flink16-examples/src/main/scala/com/flink/pipeline/example8/WindowTest.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flink16-examples/src/main/scala/com/flink/pipeline/example8/WindowTest2.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flink16-examples/src/main/java/com/turing/pipeline/example9/FlinkPipelineExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/flink16-examples/src/main/java/com/turing/pipeline/example9/FlinkPipelineExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flink16-examples/src/main/java/com/turing/pipeline/example9/WaterMark.java" beforeDir="false" afterPath="$PROJECT_DIR$/flink16-examples/src/main/java/com/turing/pipeline/example9/WaterMark.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,7 +45,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/flink-faker-0.5.2.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../flinkdemo-master/flinkdemo-master/FlinkKafka2Redis" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -188,7 +185,7 @@
       <workItem from="1678787520424" duration="1169000" />
       <workItem from="1678863742079" duration="6462000" />
       <workItem from="1678930483420" duration="541000" />
-      <workItem from="1678931447194" duration="5264000" />
+      <workItem from="1678931447194" duration="7202000" />
     </task>
     <task id="LOCAL-00001" summary="[feat][flink]add kafka source">
       <created>1678431340917</created>
@@ -477,7 +474,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678933623465</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="[feat][flink][SourceContext]使用 SourceContext 的 emitWatermark 方法来发射一个水位线 T">
+      <created>1678938191255</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1678938191255</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -502,7 +506,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[feat][flink][faker]Interval Joins" />
     <MESSAGE value="[feat][flink][faker]Lookup Joins" />
     <MESSAGE value="[feat][flink][joins]Lateral Table Join" />
     <MESSAGE value="[feat][flink][joins]flink-sql的常见用法" />
@@ -527,7 +530,8 @@
     <MESSAGE value="[feat][flink-unit]flink单元测试|测试用户自定义函数&amp;对无状态、无时间限制的UDF进行单元测试" />
     <MESSAGE value="[feat][flink-unit]DataStream API Testing与DataStream API Testing" />
     <MESSAGE value="[feat][flink]自定义水印搭配滚动时间窗口效果" />
-    <option name="LAST_COMMIT_MESSAGE" value="[feat][flink]自定义水印搭配滚动时间窗口效果" />
+    <MESSAGE value="[feat][flink][SourceContext]使用 SourceContext 的 emitWatermark 方法来发射一个水位线 T" />
+    <option name="LAST_COMMIT_MESSAGE" value="[feat][flink][SourceContext]使用 SourceContext 的 emitWatermark 方法来发射一个水位线 T" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -54,6 +54,8 @@ public class FlinkPipelineExample {
 
         DataStream<Message01> messageDS = flinkEnv.env().fromSource(source, WatermarkStrategy.noWatermarks(), "Kafka Source");
         DataStreamSource<ClientLogSource> clientLogDS = flinkEnv.env().addSource(new UserDefinedSource());
+        clientLogDS.name("clientLogDS");
+
 
         messageDS.print();
         clientLogDS.print();
@@ -63,13 +65,13 @@ public class FlinkPipelineExample {
     }
 
     private static class UserDefinedSource implements SourceFunction<ClientLogSource> {
+
         private volatile boolean isCancel;
 
         @Override
         public void run(SourceContext<ClientLogSource> sourceContext) throws Exception {
             while (!this.isCancel) {
-                sourceContext.collect(
-                        ClientLogSource
+                sourceContext.collect(ClientLogSource
                                 .builder()
                                 .id(RandomUtils.nextInt(0, 10))
                                 .price(RandomUtils.nextInt(0, 100))
