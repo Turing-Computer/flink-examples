@@ -16,12 +16,12 @@ import org.apache.flink.streaming.api.datastream.DataStreamSource;
 import org.apache.flink.streaming.api.functions.source.SourceFunction;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
+import org.apache.flink.streaming.api.watermark.Watermark;
 import java.io.InputStream;
 import java.util.Date;
 
 /**
- * @descri
+ * @descri  datastream开发示例工程
  *
  * @author lj.michale
  * @date 2023-03-16
@@ -52,11 +52,11 @@ public class FlinkPipelineExample {
                 .setDeserializer(KafkaRecordDeserializationSchema.of(new MassageKafkaDeserialization(true, true)))
                 .build();
 
-        DataStream<Message01> testDataStreamSource = flinkEnv.env().fromSource(source, WatermarkStrategy.noWatermarks(), "Kafka Source");
-        DataStreamSource<ClientLogSource> dataStreamSource = flinkEnv.env().addSource(new UserDefinedSource());
+        DataStream<Message01> messageDS = flinkEnv.env().fromSource(source, WatermarkStrategy.noWatermarks(), "Kafka Source");
+        DataStreamSource<ClientLogSource> clientLogDS = flinkEnv.env().addSource(new UserDefinedSource());
 
-        testDataStreamSource.print();
-        dataStreamSource.print();
+        messageDS.print();
+        clientLogDS.print();
 
         flinkEnv.env().execute("FlinkPipelineExample");
 
@@ -77,7 +77,8 @@ public class FlinkPipelineExample {
                                 .date(new Date().toString())
                                 .build()
                 );
-
+                /// 使用 SourceContext 的 emitWatermark 方法来发射一个水位线 T
+                sourceContext.emitWatermark(new Watermark(Long.MAX_VALUE));
                 Thread.sleep(1000L);
             }
         }

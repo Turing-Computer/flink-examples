@@ -2,6 +2,7 @@ package com.turing.pipeline.example9;
 
 
 import org.apache.flink.api.common.eventtime.WatermarkGenerator;
+import org.apache.flink.api.common.eventtime.WatermarkGeneratorSupplier;
 import org.apache.flink.api.common.eventtime.WatermarkStrategy;
 import org.apache.flink.api.common.typeinfo.Types;
 import org.apache.flink.api.java.tuple.Tuple2;
@@ -51,8 +52,7 @@ public class WaterMark {
                 new WatermarkStrategy<Tuple2<String,Long>>(){
                     private static final long serialVersionUID = 1L;
                     @Override
-                    public WatermarkGenerator<Tuple2<String, Long>> createWatermarkGenerator(
-                            org.apache.flink.api.common.eventtime.WatermarkGeneratorSupplier.Context context) {
+                    public WatermarkGenerator<Tuple2<String, Long>> createWatermarkGenerator(WatermarkGeneratorSupplier.Context context) {
                         // TODO Auto-generated method stub
                         return new MyWaterMarks();
                     }
@@ -64,7 +64,9 @@ public class WaterMark {
                 .process(new ProcessWindowFunction<Tuple2<String,Long>, String, String, TimeWindow>() {
                     private static final long serialVersionUID = 1L;
                     @Override
-                    public void process(String key, Context context, Iterable<Tuple2<String, Long>> input, Collector<String> out) {
+                    public void process(String key, Context context,
+                                        Iterable<Tuple2<String, Long>> input,
+                                        Collector<String> out) {
                         long count = 0;
                         //集合
                         ArrayList<Long> conllect = new ArrayList<Long>();
@@ -72,6 +74,7 @@ public class WaterMark {
                             conllect.add(in.f1);
                             count++;
                         }
+
                         out.collect("Window: " + context.window() + "count: " + count + " 数据：" + input.toString());
                     }
                 }).printToErr("out ");

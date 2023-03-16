@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1c196375-af57-4669-ba6e-ee5b58620dd3" name="Default Changelist" comment="[feat][flink-unit]DataStream API Testing与DataStream API Testing">
-      <change afterPath="$PROJECT_DIR$/flink16-examples/src/main/java/com/turing/pipeline/example9/FlinkPipelineExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flink16-examples/src/main/java/com/turing/pipeline/example9/MyWaterMarks.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flink16-examples/src/main/java/com/turing/pipeline/example9/PunctuatedAssigner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flink16-examples/src/main/java/com/turing/pipeline/example9/TimeLagWatermarkGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flink16-examples/src/main/java/com/turing/pipeline/example9/WaterMark.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flink16-examples/src/main/java/com/turing/pipeline/example9/WindowImageSource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flink16-examples/src/test/java/com/turing/unit/ExampleIntegrationTest.java" afterDir="false" />
+    <list default="true" id="1c196375-af57-4669-ba6e-ee5b58620dd3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/flink16-examples/src/main/scala/com/flink/pipeline/example8/WindowTest.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flink16-examples/src/main/scala/com/flink/pipeline/example8/WindowTest2.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flink16-examples/src/test/java/com/turing/unit/IncrementMapFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/flink16-examples/src/test/java/com/turing/unit/IncrementMapFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flink16-examples/src/main/java/com/turing/pipeline/example9/FlinkPipelineExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/flink16-examples/src/main/java/com/turing/pipeline/example9/FlinkPipelineExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flink16-examples/src/main/java/com/turing/pipeline/example9/WaterMark.java" beforeDir="false" afterPath="$PROJECT_DIR$/flink16-examples/src/main/java/com/turing/pipeline/example9/WaterMark.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -86,13 +82,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.WaterMark">
+  <component name="RunManager" selected="Application.WindowTest">
     <configuration name="WaterMark" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.turing.pipeline.example9.WaterMark" />
       <module name="flink16-examples" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.turing.pipeline.example9.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WindowTest" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.flink.pipeline.example8.WindowTest" />
+      <module name="flink16-examples" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.flink.pipeline.example8.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -148,29 +157,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FlinkFunctionUnitTest.testIncrement" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="flink16-examples" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.turing.unit.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.turing.unit" />
-      <option name="MAIN_CLASS_NAME" value="com.turing.unit.FlinkFunctionUnitTest" />
-      <option name="METHOD_NAME" value="testIncrement" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.WindowTest" />
         <item itemvalue="Application.WaterMark" />
         <item itemvalue="JUnit.ExampleIntegrationTest.testIncrementPipeline" />
         <item itemvalue="JUnit.FlinkFunctionUnitTest.testCustomFlatMapFunction2" />
         <item itemvalue="JUnit.FlinkFunctionUnitTest.testCustomFlatMapFunction" />
-        <item itemvalue="JUnit.FlinkFunctionUnitTest.testIncrement" />
       </list>
     </recent_temporary>
   </component>
@@ -195,7 +188,7 @@
       <workItem from="1678787520424" duration="1169000" />
       <workItem from="1678863742079" duration="6462000" />
       <workItem from="1678930483420" duration="541000" />
-      <workItem from="1678931447194" duration="2128000" />
+      <workItem from="1678931447194" duration="5264000" />
     </task>
     <task id="LOCAL-00001" summary="[feat][flink]add kafka source">
       <created>1678431340917</created>
@@ -477,7 +470,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678867530407</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="[feat][flink]自定义水印搭配滚动时间窗口效果">
+      <created>1678933623465</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1678933623465</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -502,7 +502,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[feat][flink][faker]Window Top-N" />
     <MESSAGE value="[feat][flink][faker]Interval Joins" />
     <MESSAGE value="[feat][flink][faker]Lookup Joins" />
     <MESSAGE value="[feat][flink][joins]Lateral Table Join" />
@@ -527,7 +526,8 @@
     <MESSAGE value="[feat][flink-cep]Flink CEP SQL匹配模式|skip to last pattern Item" />
     <MESSAGE value="[feat][flink-unit]flink单元测试|测试用户自定义函数&amp;对无状态、无时间限制的UDF进行单元测试" />
     <MESSAGE value="[feat][flink-unit]DataStream API Testing与DataStream API Testing" />
-    <option name="LAST_COMMIT_MESSAGE" value="[feat][flink-unit]DataStream API Testing与DataStream API Testing" />
+    <MESSAGE value="[feat][flink]自定义水印搭配滚动时间窗口效果" />
+    <option name="LAST_COMMIT_MESSAGE" value="[feat][flink]自定义水印搭配滚动时间窗口效果" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
