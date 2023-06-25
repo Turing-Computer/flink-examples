@@ -59,6 +59,7 @@
 
     <modules>
         <module>flink16-examples</module>
+        <module>flink17-examples</module>
     </modules>
 
     <dependencies>

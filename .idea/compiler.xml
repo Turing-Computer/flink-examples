@@ -6,12 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="flink17-examples" />
         <module name="flink16-examples" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="flink-examples" target="1.8" />
       <module name="flink16-examples" target="1.8" />
+      <module name="flink17-examples" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
